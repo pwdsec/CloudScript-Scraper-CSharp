@@ -5,7 +5,7 @@ using System.IO;
 /*
 *   Private as of: 4/5/2021
 *   Made by pwd0kernel - pwdsec
-*   Desc: It gets the Lua Script in Base64 Decode it and then show the source.
+*   Desc: It gets the Lua Script in Base64 Decode it and then show the source. You can also bruteforce it.
 */
 
 namespace CloudScriptScraper
