@@ -16,6 +16,7 @@ namespace CloudScriptScraper
                     var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
 
                     Console.WriteLine(Encoding.UTF8.GetString(Convert.FromBase64String(data)));
+                    Console.WriteLine($"CloudScript Code: cloudscript({code})()");
                 } 
             }
         }
