@@ -9,6 +9,7 @@ namespace CloudScriptScraper
         static void Main(string[] args)
         {
             while (true){
+
                 Console.Write("[Code]: ");
                 string code = Console.ReadLine();
 
@@ -19,6 +20,7 @@ namespace CloudScriptScraper
 
                     Console.WriteLine(source);
                 }
+                
             }
         }
     }
