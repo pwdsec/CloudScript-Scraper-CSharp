@@ -5,6 +5,7 @@ using System.IO;
 /*
 *   Private as of: 4/5/2021
 *   Made by pwd0kernel - pwdsec
+*   Desc: It gets the Lua Script in Base64 Decode it and then show the source.
 */
 
 namespace CloudScriptScraper
@@ -21,7 +22,7 @@ namespace CloudScriptScraper
                 string code = Console.ReadLine();
                 using (var client = new WebClient()) {
                     var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
-                    
+
                     Console.WriteLine(Encoding.UTF8.GetString(Convert.FromBase64String(data)));
                     File.WriteAllText($"Scripts\\{code}_src.lua", Encoding.UTF8.GetString(Convert.FromBase64String(data)));
                     Console.WriteLine($"CloudScript Code: cloudscript({code})()");
