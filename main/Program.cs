@@ -12,6 +12,19 @@ namespace CloudScriptScraper
 {
     class Program
     {
+        static void BruceForce(){
+            // this can take forever, so just go here: https://lynx.rip/dashboard/home/cloudscripts/storage/
+            // you can also use threading so it goes way faster lol, i juts didn't do it
+            for (int i = 1; i <= 1000000; i = i + 1) {
+                try {
+                    using (var client = new WebClient()) {
+                        var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{i}_src.lua"); 
+                        Console.WriteLine(data);
+                    }
+                } catch(Exception) { Console.WriteLine($"Error: {i}"); }
+            }
+        }
+
         static void Main(string[] args)
         {
             if (!Directory.Exists("Scripts"))
@@ -20,6 +33,11 @@ namespace CloudScriptScraper
             while (true) {
                 Console.Write("[Code]: ");
                 string code = Console.ReadLine();
+
+                if (code == "brute") { // low-key useless
+                    BruceForce();
+                }
+
                 using (var client = new WebClient()) {
                     var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
 
