@@ -28,6 +28,7 @@ namespace CloudScriptScraper
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Commands: brute - BruteForce Scripts");
             if (!Directory.Exists("Scripts"))
                 Directory.CreateDirectory("Scripts");
 
