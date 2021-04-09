@@ -40,7 +40,8 @@ namespace CloudScriptScraper
                 string code = Console.ReadLine();
 
                 if (code == "brute") { // low-key useless
-                    BruceForce(1000000);
+                    Console.Write("[Number]: ");
+                    BruceForce(int.Parse(Console.ReadLine()));
                 }
 
                 using (var client = new WebClient()) {
