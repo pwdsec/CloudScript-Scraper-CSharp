@@ -29,15 +29,24 @@ namespace CloudScriptScraper
             }
         }
 
-        static void Main(string[] args)
+        /*
+        *   [Commands]:
+        *       bute (tries to brute force accounts)
+        */
+        static void Main()
         {
             Console.WriteLine("Commands: brute - BruteForce Scripts");
             if (!Directory.Exists("Scripts"))
                 Directory.CreateDirectory("Scripts");
 
             while (true) {
-                Console.Write("[Code]: ");
+                Console.Write("[Code/Cloudscript]: ");
                 string code = Console.ReadLine();
+
+                // there are alternative ways of doing replace
+                code = code.Replace("cloudscript", "");
+                code = code.Replace("(", "");
+                code = code.Replace(")", "");
 
                 if (code == "brute") { // low-key useless
                     Console.Write("[Number]: ");
