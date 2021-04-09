@@ -8,6 +8,7 @@ using System.IO;
 *   Made by pwd0kernel - pwdsec
 *   Desc: It gets the Lua Script in Base64 Decode it and then show the source. You can also bruteforce it.
 *   Organization: https://github.com/pwdsec
+*   C++ Version [not updated]: https://github.com/pwdsec/CloudScript-Scraper
 *
 *   Last edited: 4/9/2021 
 *   ChangeLogs:
