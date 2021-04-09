@@ -22,7 +22,7 @@ namespace CloudScriptScraper
 {
     class Program
     {
-        static void BruceForce(int num){
+        static void BruceForce(int num) {
             // this can take forever, so just go here: https://lynx.rip/dashboard/home/cloudscripts/storage/
             // you can also use threading so it goes way faster lol, i juts didn't do it (maybe later?)
             for (int i = 1; i <= num; i = i + 1) { // original [num]{1000000}
