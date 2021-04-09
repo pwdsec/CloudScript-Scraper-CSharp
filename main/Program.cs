@@ -17,7 +17,7 @@ using System.IO;
 *       [4/9/2021] - Formated the code.
 *       [4/9/2021] - Changed a bit the stuff.
 *       [4/9/2021] - Shitty {Not Found} handler.
-*       [4/9/2021] - Made it work with { cloudscript(470029)() } it will just remove cloudscript()()
+*       [4/9/2021] - Made it work with { cloudscript(0000000)() } it will just remove cloudscript()() and keep the int
 *       [x/x/xxxx] - Bruteforce.
 *       [x/x/xxxx] - Start of the project. 
 *
