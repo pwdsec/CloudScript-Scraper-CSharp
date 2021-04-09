@@ -9,6 +9,8 @@ using System.IO;
 *   Desc: It gets the Lua Script in Base64 Decode it and then show the source. You can also bruteforce it.
 *   Organization: https://github.com/pwdsec
 *   C++ Version [not updated]: https://github.com/pwdsec/CloudScript-Scraper
+*   Lynx Cloudscripts: https://lynx.rip/dashboard/home/cloudscripts/storage/
+*   You can also buy Lynx here: https://lynx.rip/purchase/
 *
 *   Last edited: 4/9/2021 
 *   ChangeLogs:
@@ -18,6 +20,10 @@ using System.IO;
 *       [4/9/2021] - Made it work with { cloudscript(470029)() } it will just remove cloudscript()()
 *       [x/x/xxxx] - Bruteforce.
 *       [x/x/xxxx] - Start of the project. 
+*
+*   Commands: 
+*       bute (tries to brute force accounts).
+*       help (explains how to use etc).
 */
 
 namespace CloudScriptScraper
