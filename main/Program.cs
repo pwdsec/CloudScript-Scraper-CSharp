@@ -16,10 +16,10 @@ namespace CloudScriptScraper
 {
     class Program
     {
-        static void BruceForce(){
+        static void BruceForce(int num){
             // this can take forever, so just go here: https://lynx.rip/dashboard/home/cloudscripts/storage/
             // you can also use threading so it goes way faster lol, i juts didn't do it
-            for (int i = 1; i <= 1000000; i = i + 1) {
+            for (int i = 1; i <= num; i = i + 1) { // original [num]{1000000}
                 try {
                     using (var client = new WebClient()) {
                         var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{i}_src.lua"); 
@@ -40,7 +40,7 @@ namespace CloudScriptScraper
                 string code = Console.ReadLine();
 
                 if (code == "brute") { // low-key useless
-                    BruceForce();
+                    BruceForce(1000000);
                 }
 
                 using (var client = new WebClient()) {
