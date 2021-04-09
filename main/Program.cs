@@ -24,6 +24,7 @@ using System.IO;
 *   Commands: 
 *       bute (tries to brute force accounts).
 *       help (explains how to use etc).
+*       exit (closes the app)
 */
 
 namespace CloudScriptScraper
@@ -60,11 +61,12 @@ namespace CloudScriptScraper
         *   [Commands]:
         *       bute (tries to brute force accounts).
         *       help (explains how to use etc).
+        *       exit (closes the app).
         */
         
         static void Main()
         {
-            Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]");
+            Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]\n  exit - closes the app");
             if (!Directory.Exists("Scripts"))
             {
                 Directory.CreateDirectory("Scripts");
@@ -87,6 +89,10 @@ namespace CloudScriptScraper
                 else if (code == "help")
                 {
                     Console.WriteLine("Go on lynx cloudscript page and copy a script.\nThen paste it here and it will show the full script.");
+                }
+                else if (code == "exit")
+                {
+                    Environment.Exit(0);
                 }
                 else
                 {
