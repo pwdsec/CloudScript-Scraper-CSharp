@@ -11,8 +11,11 @@ using System.IO;
 *
 *   Last edited: 4/9/2021 
 *   ChangeLogs:
-*       [4/9/2021] - shitty {Not Found} handler
+*       [4/9/2021] - changed a bit the stuff.
+*       [4/9/2021] - Shitty {Not Found} handler.
 *       [4/9/2021] - Made it work with { cloudscript(470029)() } it will just remove cloudscript()()
+*       [x/x/xxxx] - Bruteforce.
+*       [x/x/xxxx] - Start of the project. 
 */
 
 namespace CloudScriptScraper
@@ -32,38 +35,47 @@ namespace CloudScriptScraper
             }
         }
 
+        static string replace_cs(string data) {
+            data = data.Replace("cloudscript", "");
+            data = data.Replace("(", "");
+            data = data.Replace(")", "");
+            return data;
+        }
+
         /*
         *   [Commands]:
         *       bute (tries to brute force accounts).
         */
         static void Main()
         {
-            Console.WriteLine("Commands: brute - BruteForce Scripts");
-            if (!Directory.Exists("Scripts"))
+            Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]");
+            if (!Directory.Exists("Scripts")) {
                 Directory.CreateDirectory("Scripts");
+                Console.WriteLine("\"Scripts\" Folder created.");
+            }
 
             while (true) {
                 Console.Write("[Code/Cloudscript]: ");
                 string code = Console.ReadLine();
 
                 // there are alternative ways of doing replace
-                code = code.Replace("cloudscript", "");
-                code = code.Replace("(", "");
-                code = code.Replace(")", "");
+                code = replace_cs(code);
 
                 if (code == "brute") { // low-key useless
                     Console.Write("[Number]: ");
                     BruceForce(int.Parse(Console.ReadLine())); // original [num]{1000000}
-                }
-
-                using (var client = new WebClient()) {
-                    var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
-                    if (!data.Contains("Not Found")) { // shity detector
-                        Console.WriteLine(Encoding.UTF8.GetString(Convert.FromBase64String(data)));
-                        File.WriteAllText($"Scripts\\{code}_src.lua", Encoding.UTF8.GetString(Convert.FromBase64String(data)));
-                        Console.WriteLine($"CloudScript Code: cloudscript({code})()");
+                } else if (code == "help") {
+                    Console.WriteLine("Go on lynx cloudscript page and copy a script.\nThen paste it here and it will show the full script.");
+                } else {
+                    using (var client = new WebClient()) {
+                        var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
+                        if (!data.Contains("Not Found")) { // shity detector
+                            Console.WriteLine(Encoding.UTF8.GetString(Convert.FromBase64String(data)));
+                            File.WriteAllText($"Scripts\\{code}_src.lua", Encoding.UTF8.GetString(Convert.FromBase64String(data)));
+                            Console.WriteLine($"CloudScript Code: cloudscript({code})()");
+                        }
+                        else{ Console.WriteLine("This script does not exists"); }
                     }
-                    else{ Console.WriteLine("This script does not exists"); }
                 } 
             }
         }
