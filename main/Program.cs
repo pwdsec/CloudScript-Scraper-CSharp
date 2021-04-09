@@ -53,7 +53,9 @@ namespace CloudScriptScraper
         /*
         *   [Commands]:
         *       bute (tries to brute force accounts).
+        *       help (explains how to use etc).
         */
+        
         static void Main()
         {
             Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]");
