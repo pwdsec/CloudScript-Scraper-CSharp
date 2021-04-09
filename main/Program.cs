@@ -10,6 +10,8 @@ using System.IO;
 *   Organization: https://github.com/pwdsec
 *
 *   Last edited: 4/9/2021 
+*   ChangeLogs:
+*       [4/9/2021] - Made it work with { cloudscript(470029)() } it will just remove cloudscript()()
 */
 
 namespace CloudScriptScraper
@@ -31,7 +33,7 @@ namespace CloudScriptScraper
 
         /*
         *   [Commands]:
-        *       bute (tries to brute force accounts)
+        *       bute (tries to brute force accounts).
         */
         static void Main()
         {
