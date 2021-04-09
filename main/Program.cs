@@ -41,7 +41,7 @@ namespace CloudScriptScraper
 
                 if (code == "brute") { // low-key useless
                     Console.Write("[Number]: ");
-                    BruceForce(int.Parse(Console.ReadLine()));
+                    BruceForce(int.Parse(Console.ReadLine())); // original [num]{1000000}
                 }
 
                 using (var client = new WebClient()) {
