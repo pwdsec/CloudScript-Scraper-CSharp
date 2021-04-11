@@ -55,6 +55,7 @@ namespace CloudScriptScraper
 
         static string replace_cs(string data)
         {
+            if (string.IsNullOrEmpty(data)) throw new ArgumentException("put a cloudscript code or script ex: cloudscript(00000)()");
             if (data.Contains("cloudscript"))
             {
                 data = data.Replace("cloudscript", "");
@@ -89,8 +90,7 @@ namespace CloudScriptScraper
                 {
                     using (var client = new WebClient())
                     {
-                        // there are alternative ways of doing replace
-                        code = replace_cs(code);
+                        code = replace_cs(code); // there are alternative ways of doing replace
                         var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{code}_src.lua");
                         if (!data.Contains("Not Found")) // shity detector
                         {
