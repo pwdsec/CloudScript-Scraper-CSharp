@@ -60,10 +60,7 @@ namespace CloudScriptScraper
                 data = data.Replace(")", "");
                 return data;
             }
-            else
-            {
-                return data;
-            }
+            else { return data; }
         }
 
         /*
