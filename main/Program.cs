@@ -77,7 +77,6 @@ namespace CloudScriptScraper
         {
             Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]\n  exit - closes the app");
             if (!Directory.Exists("Scripts")) Directory.CreateDirectory("Scripts");
-
             while (true)
             {
                 Console.Write("[Code/Cloudscript]: ");
