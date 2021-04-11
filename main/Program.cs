@@ -12,7 +12,7 @@ using System.IO;
 *   Lynx Cloudscripts: https://lynx.rip/dashboard/home/cloudscripts/storage/
 *   You can also buy Lynx here: https://lynx.rip/purchase/
 *
-*   Last edited: 4/9/2021 
+*   Last edited: 4/10/2021 
 *   ChangeLogs:
 *       [4/9/2021] - Formated the code.
 *       [4/9/2021] - Changed a bit the stuff.
@@ -33,10 +33,10 @@ namespace CloudScriptScraper
     {
         static void BruceForce(int num)
         {
-            // this can take forever, so just go here: https://lynx.rip/dashboard/home/cloudscripts/storage/
-            // you can also use threading so it goes way faster lol, i juts didn't do it (maybe later?)
-            for (int i = 1; i <= num; i = i + 1)
-            { // original [num]{1000000}
+            /*this can take forever, so just go here: https://lynx.rip/dashboard/home/cloudscripts/storage/
+            you can also use threading so it goes way faster lol, i juts didn't do it (maybe later?)*/
+            for (int i = 1; i <= num; i = i + 1) // original [num]{1000000}
+            {
                 try
                 {
                     using (var client = new WebClient())
@@ -51,10 +51,17 @@ namespace CloudScriptScraper
 
         static string replace_cs(string data)
         {
-            data = data.Replace("cloudscript", "");
-            data = data.Replace("(", "");
-            data = data.Replace(")", "");
-            return data;
+            if (data.Contains("cloudscript"))
+            {
+                data = data.Replace("cloudscript", "");
+                data = data.Replace("(", "");
+                data = data.Replace(")", "");
+                return data;
+            }
+            else
+            {
+                return data;
+            }
         }
 
         /*
@@ -63,7 +70,7 @@ namespace CloudScriptScraper
         *       help (explains how to use etc).
         *       exit (closes the app).
         */
-        
+
         static void Main()
         {
             Console.WriteLine("Commands: \n brute - BruteForce Scripts\n    help - [show how to use etc]\n  exit - closes the app");
