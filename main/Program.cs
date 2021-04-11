@@ -14,6 +14,7 @@ using System.IO;
 *
 *   Last edited: 4/10/2021 
 *   ChangeLogs:
+*       [4/10/2021] - Throw Exception!!??
 *       [4/10/2021] - Changed some codes again.
 *       [4/10/2021] - Added some codes and formated.
 *       [4/9/2021] - Formated the code.
