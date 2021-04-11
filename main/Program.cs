@@ -90,8 +90,8 @@ namespace CloudScriptScraper
                 // there are alternative ways of doing replace
                 code = replace_cs(code);
 
-                if (code == "brute")
-                { // low-key useless
+                if (code == "brute") // low-key useless
+                {
                     Console.Write("[Number]: ");
                     BruceForce(int.Parse(Console.ReadLine())); // original [num]{1000000}
                 }
