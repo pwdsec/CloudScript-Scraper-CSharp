@@ -44,7 +44,10 @@ namespace CloudScriptScraper
                     using (var client = new WebClient())
                     {
                         var data = client.DownloadString($"http://lynx.rip/dashboard/home/cloudscripts/storage/{i}_src.lua");
-                        Console.WriteLine(data);
+                        if (!data.Contains("Not Found"))
+                        {
+                            Console.WriteLine(i);
+                        }
                     }
                 }
                 catch (Exception) { Console.WriteLine($"Error: {i}"); }
