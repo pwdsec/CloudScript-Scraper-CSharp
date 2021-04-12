@@ -1,8 +1,8 @@
-<p style="font-size:30px" align="center">
+<h1  align="center">
     CloudScript Scraper C#
-    <p style="font-size:18px" align="center">Working as of: - 3/27/2021</p>
+    <h4 align="center">Working as of: - 3/27/2021</h4>
     <br>
-</p>
+</h1>
 
 Takes less codes in C# than C++ so why not. It gets the Lua Script in Base64 Decode it and then show the source. It will also create a folder "Script" and put all the sources there that you have checked. I added bruteforce too but low-key useless. Just go here: <a href="https://lynx.rip/dashboard/home/cloudscripts/storage/">cloudscripts/storage/</a> you will have access to all the codes.
 
