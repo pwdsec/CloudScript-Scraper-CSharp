@@ -19,17 +19,17 @@ bG9jYWwgYSA9ICJoZWxsbyB3b3JsZCIKcHJpbnQoYSk=
 
 </br>
 
-* ChangeLogs:
-  * <b>[4/10/2021]:</b>
+* ##### ChangeLogs:
+  * ##### <b>[4/10/2021]:</b>
     * Throw Exception!!??
     * Changed some codes again.
     * Added some codes and formated.
-  * <b>[4/9/2021]:</b>
+  * ##### <b>[4/9/2021]:</b>
     * Formated the code.
     * Changed a bit the stuff.
     * Shitty {Not Found} handler.
     * Made it work with `cloudscript(0000000)()` it will just remove `cloudscript()()` and keep the int
-  * <b>[X/X/XXX]:</b>
+  * ##### <b>[X/X/XXX]:</b>
     * Bruteforce. 
     * Cloudscript scrapper.
     * Start of the project. 
