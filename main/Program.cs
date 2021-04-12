@@ -76,6 +76,7 @@ namespace CloudScriptScraper
 
         static void Main()
         {
+            Console.Title = "CloudScript Scraper";
             Console.WriteLine("Commands: \n brute - [BruteForce Scripts]\n    help - [show how to use etc]\n  exit - [closes the app]");
             if (!Directory.Exists("Scripts")) Directory.CreateDirectory("Scripts");
             while (true)
@@ -98,7 +99,7 @@ namespace CloudScriptScraper
                             File.WriteAllText($"Scripts\\{code}_src.lua", Encoding.UTF8.GetString(Convert.FromBase64String(data)));
                             Console.WriteLine($"CloudScript Code: cloudscript({code})()");
                         }
-                        else Console.WriteLine("This script does not exists");
+                        else Console.WriteLine("This script does not exists.");
                     }
                 }
             }
