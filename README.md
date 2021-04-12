@@ -4,7 +4,7 @@
     <br>
 </h1>
 
-Takes less codes in C# than C++ so why not. It gets the Lua Script in Base64 Decode it and then show the source. It will also create a folder "Script" and put all the sources there that you have checked. I added bruteforce too but low-key useless. Just go here: <a href="https://lynx.rip/dashboard/home/cloudscripts/storage/">cloudscripts/storage/</a> you will have access to all the codes.
+Takes less codes in <b>C#</b> than <b>C++</b> so why not. It gets the <b>Lua Script</b> in <b>Base64</b> and then <b>Decode</b> it and then show the source. It will also create a folder "<b>Script</b>" and put all the sources there that you have checked. I added <b>bruteforce</b> too but low-key useless. Just go here: <b><a href="https://lynx.rip/dashboard/home/cloudscripts/storage/">cloudscripts/storage/</a></b> you will have access to all the codes.
 
 You will get an output like this:
 
